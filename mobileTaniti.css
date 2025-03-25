@@ -1,0 +1,30 @@
+/* top navigation, site title, and site logo*/
+.topnav { height: 14.5%; }
+
+.siteTitle { left: 15%; margin-top: 2%; }
+
+.siteLogo { display: none }
+
+.menu_container .main_menu_link { height: auto; display: none; margin-top: 7%; }
+
+.main_menu_link i { display: none; }
+
+.topnav a.menuIcon { margin: 0; position: fixed; right: 0; top: 0; display: block; }
+
+.siteTitle.responsive { display: none; }
+
+.topnav.responsive { height: auto;  }
+
+.topnav.responsive .main_menu {
+    display: block;
+    .sub_menu { display: none; }
+}
+
+.topnav.responsive .main_menu_link:hover {
+    color: black;
+    background-color: #d9d9d9;
+}
+
+.topnav.responsive .menuIcon { margin: 0; position: fixed; right: 0; top: 0; }
+
+.menu_container.responsive .main_menu_link { float: none; display: block; text-align: right; }

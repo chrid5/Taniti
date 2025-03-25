@@ -1,0 +1,416 @@
+/* Body of Webpages */
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://fonts.googleapis.com/css?family=Jura");
+@import url("https://fonts.googleapis.com/css?family=Josefin Slab");
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    color:black;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Top Navigation w/ Heading and Site Logo */
+
+.topnav {
+    padding: 1.35%;
+    font-family: "Jura", sans-serif;
+    background-color: #d9d9d9;
+    overflow: hidden;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    text-align: right;
+}
+
+.topnav a {
+    top: 0;
+    display: inline-flex;
+    margin-right: 30px;
+    color:black;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.topnav .main_menu_link:hover {
+    color: white;
+    background-color: black;
+    border-radius: 6px;
+}
+
+.main_menu {
+    position: relative;
+    display: inline-block;
+}
+
+.sub_menu {
+    display: none;
+    position: fixed;
+    background-color:#585858;
+    color: white;
+}
+
+.sub_menu a {
+    color: white;
+    z-index: 0;
+    text-decoration: none;
+    text-align: left;
+    display: block;
+    border-bottom: 1px dashed white;
+    margin-left: 30px;
+}
+
+.sub_menu a:hover {
+    color: skyblue;
+}
+
+.sub_menu a:last-child {
+    border: none;
+}
+
+.main_menu:hover .sub_menu {
+    display: block;
+    -webkit-animation: menu_fadeIn 0.4s;
+    animation: menu_fadeIn 0.4s;
+    opacity: .8;
+}
+
+@-webkit-keyframes menu_fadeIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 50px, 0) scale(1.1);
+        transform: translate3d(0, 50px, 0) scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transformation: none;
+        transform: none;
+    }
+}
+
+@keyframes menu_fadeIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 50px, 0) scale(1.1);
+        transform: translate3d(0, 50px, 0) scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transformation: none;
+        transform: none;
+    }
+}
+
+.menu_fadeIn {
+    -webkit-animation-name: menu_fadeIn;
+    animation-name: menu_fadeIn;
+}
+
+.siteTitle {
+    position: fixed;
+    margin: 0;
+    top: 0;
+    left: 8%;
+    margin-top: .75%;
+    float: left;
+    color: black;
+}
+
+.siteTitle, br {
+    text-align:center;
+}
+
+.topnav .menuIcon { 
+    display: none; 
+}
+
+.siteLogo {
+    position: fixed;
+    top: 0;
+    left: 1.75%;
+    margin-top: .75%;
+    float: left;
+    height: 10.8%;
+    width: 5.21%;
+    rotate: 270deg;
+}
+
+/* Carousel Progess bar & slides */
+/*
+.progressBar {
+    opacity: .5;
+    width:100%;
+    height: 1.6%;
+    z-index: -1;
+    background-color:#585858;
+    top: 15.55%;
+    position: absolute;
+    margin: auto;
+}
+
+.progress {
+    opacity: .5;
+    width:0%;
+    height: 100%;
+    background-color:black;
+    animation: progressMove 10s linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes progressMove {
+    to {
+        width: 100%;
+    }
+}
+*/
+
+.mySlides {
+    display: none;
+}
+
+.slideshowContainer {
+    max-width: 100%;
+    width: 100%;
+    z-index: -2;
+    top: 15.65%;
+    position: absolute;
+    margin: auto;
+    overflow-x: hidden;
+    
+}
+
+/*
+
+@media only screen and (max-height: 900px) {
+    .siteLogo { width: 6vw; height: 6.9vh;}
+    .slideshowContainer { top: 15.65%; }
+}
+
+@media screen and (max-height: 1080px) {
+    .slideshowContainer { top: 13.5%; }
+}
+
+@media screen and (max-height: 1440px) {
+    .siteLogo {width: 5vw; height: 5.9vh;}
+    .slideshowContainer {top: 10.7%;}
+}
+
+*/
+
+.slideText {
+    color: white;
+    background-color: rgba(0,0,0,.5);
+    font-size: 20px;
+    font-family: "Josefin Slab", sans-serif;
+    font-weight: bold;
+    padding: .5% .7%;
+    position: absolute;
+    bottom: .5%;
+    width: 100%;
+    text-align: left;
+}
+
+.carouselImg {
+    width: 100%;
+    height: 60vh;
+}
+
+.mySlides, .slideMove {
+    animation-name: slideMove;
+    animation-duration: 1s;
+}
+
+@-webkit-keyframes slideMove {
+    from {opacity: .4; transform: translateX(1%) scale(1.0);}
+    to {opacity: 1; transform: translateX(0%) scale(1.0);}
+}
+
+@keyframes slideMove {
+    from {opacity: .4; transform: translateX(1%) scale(1.0);}
+    to {opacity: 1; transform: translateX(0%) scale(1.0);}
+}
+
+.infoSection {
+    font-family: "Josefin Slab", sans-serif;
+    font-size: 36px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 77%;
+    z-index: -1;
+}
+
+.aboutSection {
+    font-family: "Josefin Slab", sans-serif;
+    font-size: 36px;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 15.65%;
+    z-index: -1;
+}
+
+.infoText {
+    background-color: rgba(0,0,0,.6);
+    color: white;
+    padding: 10%;
+}
+
+footer {  
+    position:fixed; 
+    width: 100%; 
+    text-align: center; 
+    bottom: 0;  
+}
+
+#HomeInfo {
+    background-image: url("Assets/Home/tahiti_mountains\(michelle_raponi_pixabay.com\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Cruise {
+    background-image: url("Assets/Vacations/tahiti_port\(djj973_pixabay.com\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#Flight {
+    background-image: url("Assets/Vacations/plane-aircraft-sky\(storme22k_pixabay.com\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#tanitiTransport {
+    background-image: url("Assets/Transportation/bike-rental-beach\(peggy_marco_pixabay.com\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#tanitiLodging {
+    background-image: url("Assets/Lodging/resort-beach-resort\(paul_henri_pixabay.com\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#tanitiDining {
+    background-image: url("Assets/Food/nico-smit-I9jfdhtXQrQ-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#tanitiGrocery {
+    background-image: url("Assets/Food/jakub-kapusnak-vnNFWKY7Tj4-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#tanitiEntertainment {
+    background-image: url("Assets/Entertainment/bora_over_water_bungalows\(michelle_raponi_pixabay.com\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#infoTaniti {
+    background-image: url("Assets/Info/french-polynesia-tahiti\(rayjo_pixabay.com\).jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#infoTaniti ul {
+    list-style: none;
+}
+
+/* Footer & modal box content */
+
+#credits-btn { 
+    font-family: "Josefin Slab", sans-serif;
+    background-color: #d9d9d9; 
+    color: black; 
+    padding: 8px 12px;
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    border-style: none;
+    border-radius: 12px;
+}
+    
+#credits-btn:hover { background-color: rgba(0,0,0,.6); color: white; }
+
+/* The Modal (background) */
+.creditsModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    -webkit-animation-name: fadeIn; /* Fade in the background */
+    -webkit-animation-duration: 0.4s;
+    animation-name: fadeIn;
+    animation-duration: 0.4s
+  }
+  
+/* Modal Content */
+.modalContent {
+    position: relative;
+    background-color: #fefefe;
+    width: 100%;
+    -webkit-animation-name: slideIn;
+    -webkit-animation-duration: 0.4s;
+    animation-name: slideIn;
+    animation-duration: 0.4s
+}
+
+/* The Close Button */
+.modalHeader i {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+.modalHeader i:hover,
+.modalHeader i:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+  
+.modalHeader {
+    padding: 2px 16px;
+    background-color: #585858;
+    color: white;
+}
+  
+.modalBody { padding: 2px 16px; }
+
+.modalBody img { width: 150px; height: 150px; margin-top: 20px; }
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+    from {top: -300px; opacity: 0} 
+    to {top: 0; opacity: 1}
+}
+  
+  @keyframes slideIn {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+  
+@-webkit-keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
+  
+@keyframes fadeIn {
+    from {opacity: 0} 
+    to {opacity: 1}
+}
